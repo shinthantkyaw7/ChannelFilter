@@ -71,12 +71,12 @@ Thanks to [InfotelGroup](https://telegram.dog/InFoTelGroup) and [Erich Daniken](
 ## Installation
 
 ### Deploy to Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TroJanzHEX/Auto-Filter-Bot-V2)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kopaing12/ChannelFilter)
 
 ### Deploy in your vps
 ```sh
-git clone https://github.com/TroJanzHEX/Auto-Filter-Bot-V2
-cd Auto-Filter-Bot-V2
+git clone https://github.com/Kopaing12/ChannelFilter
+cd ChannelFilter
 pip3 install -r requirements.txt
 # <Create config.py appropriately>
 python3 main.py
