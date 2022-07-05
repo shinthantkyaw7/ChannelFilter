@@ -38,7 +38,7 @@ async def addchannel(client: Bot, message: Message):
         await message.reply_text(
             "<i>Enter in correct format!\n\n<code>/add channelid</code>  or\n"
             "<code>/add @channelusername</code></i>"
-            "\n\nGet Channel id from @ChannelidHEXbot",
+            "\n\nGet Channel id from @MT_ID_BOT",
         )
         return
     try:
@@ -68,7 +68,7 @@ async def addchannel(client: Bot, message: Message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<i>Add me as admin in your channel with admin rights - 'Invite Users via Link' and try again</i>",
+            "<i>ကျွန်ုပ်ကို သင့်ချန်နယ်တွင် စီမံခန့်ခွဲသူအဖြစ် ထည့်ပါ - 'လင့်ခ်မှတစ်ဆင့် အသုံးပြုသူများကို ဖိတ်ကြားပါ' ထပ်စမ်းကြည့်ပါ။</i>",
         )
         return
 
@@ -84,8 +84,8 @@ async def addchannel(client: Bot, message: Message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<i>User {user.first_name} couldn't join your channel! Make sure user is not banned in channel."
-            "\n\nOr manually add the user to your channel and try again</i>",
+            f"<i>User {user.first_name} သင့်ချန်နယ်တွင် မပါဝင်နိုင်ခဲ့ပါ။ အသုံးပြုသူကို ချန်နယ်တွင် ပိတ်ပင်ထားခြင်း မရှိကြောင်း သေချာပါစေ။"
+            "\n\nသို့မဟုတ် အသုံးပြုသူကို သင့်ချန်နယ်သို့ ကိုယ်တိုင်ထည့်ကာ ထပ်စမ်းကြည့်ပါ။</i>",
         )
         return
 
@@ -98,7 +98,7 @@ async def addchannel(client: Bot, message: Message):
         return
 
     intmsg = await message.reply_text(
-        "<i>Please wait while I'm adding your channel files to DB"
+        "<i>မင်းရဲ့ချန်နယ်ဖိုင်တွေကို DB မှာထည့်နေချိန်မှာ ခဏစောင့်ပါ။"
         "\n\nIt may take some time if you have more files in channel!!"
         "\nDon't give any other commands now!</i>"
     )
@@ -185,12 +185,12 @@ async def addchannel(client: Bot, message: Message):
     if docs:
         await savefiles(docs, group_id)
     else:
-        await intmsg.edit_text("Channel couldn't be added. Try after some time!")
+        await intmsg.edit_text("ချန်နယ်ကို ထည့်၍မရပါ။ အချိန်တစ်ခုပြီးမှ ကြိုးစားပါ။!")
         return
 
     await channelgroup(channel_id, channel_name, group_id, group_name)
 
-    await intmsg.edit_text("Channel added successfully!")
+    await intmsg.edit_text("ချန်နယ်ကို အောင်မြင်စွာ ထည့်သွင်းခဲ့သည်။!")
 
 
 @Client.on_message(filters.group & filters.command(["del"]))
@@ -235,13 +235,13 @@ async def deletechannelfilters(client: Bot, message: Message):
         chatdetails = await client.USER.get_chat(chid)
     except:
         await message.reply_text(
-            "<i>User must be present in given channel.\n\n"
-            "If user is already present, send a message to your channel and try again</i>"
+            "<i>အသုံးပြုသူသည် ပေးထားသောချန်နယ်တွင် ရှိနေရပါမည်။.\n\n"
+            "အသုံးပြုသူရှိနေပါက၊ သင့်ချန်နယ်သို့ စာတိုတစ်စောင်ပေးပို့ပြီး ထပ်စမ်းကြည့်ပါ။</i>"
         )
         return
 
     intmsg = await message.reply_text(
-        "<i>Please wait while I'm deleteing your channel"
+        "<i>သင့်ချန်နယ်ကို ဖျက်နေစဉ် ကျေးဇူးပြု၍ စောင့်ပါ။"
         "\n\nDon't give any other commands now!</i>"
     )
 
@@ -270,7 +270,7 @@ async def deletechannelfilters(client: Bot, message: Message):
 @Client.on_message(filters.group & filters.command(["delall"]))
 async def delallconfirm(client: Bot, message: Message):
     await message.reply_text(
-        "Are you sure?? This will disconnect all connected channels and deletes all filters in group",
+        "သေချာလား??ချိတ်ဆက်ထားသော ချန်နယ်များအားလုံးကို ချိတ်ဆက်မှုဖြတ်တောက်ပြီး Group အတွင်းရှိ Filter များအားလုံးကို ဖျက်ပါမည်။",
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton(text="YES",callback_data="delallconfirm")],
             [InlineKeyboardButton(text="CANCEL",callback_data="delallcancel")]
@@ -284,7 +284,7 @@ async def deleteallfilters(client: Bot, message: Message):
         return
 
     intmsg = await message.reply_to_message.reply_text(
-        "<i>Please wait while I'm deleteing your channel.</i>"
+        "<i>သင့်ချန်နယ်ကို ဖျက်နေစဉ် ကျေးဇူးပြု၍ စောင့်ပါl.</i>"
         "\n\nDon't give any other commands now!</i>"
     )
 
