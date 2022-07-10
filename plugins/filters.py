@@ -43,9 +43,7 @@ async def filter(client: Bot, message: Message):
                 btn.append(
                     [InlineKeyboardButton(text=f"🌹 {filename}",url=f"{link}")]
             )
-            buttons.append(
-                [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_By_KP/90")]
-            )
+           
         else:
             return
 
