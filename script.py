@@ -3,13 +3,13 @@ class script(object):
 
     START_MSG = """ <b>ဟေလူ {} 
 
-ဘာလာရှာတာလဲ ?
+ဘာလာရှာတာလဲ 
 
-မြွေပွေးလား မြွေဟောက်လား ဟေလူ ကြိုက်‌တာပြောလိုက်ပါ
+ကြိုက်‌တာပြောလိုက်ပါ
 
 Delivery နဲ့ ပါဆယ်ပိုပေးလိုက်မယ်။ Ok လား? 😂😂
 
-@KOPAING15 <i>-Contact Me</i></b>"""
+@Channel_X_Movies <i>-Contact Me</i></b>"""
 
 
     HELP_MSG = """<b>How to use the bot??</b>
@@ -51,17 +51,17 @@ No need add each filter again!
 Bot will automatically search for your files and give links to that!
 
 
-<b>© @KOPAING15</b>"""
+<b>© @Channel_X_Movies</b>"""
 
 
-    ABOUT_MSG = """⭕️<b>My Name : KO PAing </b>
+    ABOUT_MSG = """⭕️<b>My Name : Shin Thant Kyaw </b>
     
-⭕️<b>Creater :</b> @KOPAING15
+⭕️<b>Creater :</b> Shin Thant Kyaw 
 
 ⭕️<b>Language :</b> <code>Python3</code>
 
 ⭕️<b>Library :</b> <a href='https://docs.pyrogram.org/'>Pyrogram 1.0.7</a> 
 
-⭕️<b>Tutorial Video :</b> <a href='https://t.me/mksmainchannel'>Video Link</a> 
+⭕️<b>Tutorial Video :</b> <a href='t.me/Channel_X_Movies'>Video Link</a> 
 
 """
